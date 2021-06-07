@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Campos & Souza | Início</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/4e6fe3670a.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </head>
+  <body background="../assets/background.svg" class="bg">
+    <nav class="navbar">
+      <img src="../assets/campos-e-souza-logo-padrao.svg" />
+      <ul>
+        <li><a class="" href="#home">a empresa</a></li>
+        <li><a href="#">nossos serviços</a></li>
+        <li><a href="#">clientes</a></li>
+        <li><button class="outline-button" href="#" style="margin: 16px;">orçamento</button></li>
+      </ul>
+    </nav>
+    <div class="wrapper-logo-with-text">
+      <img class="img-logo-with-text" src="../assets/campos-e-souza-logo-padrao.svg" />
+      <div>
+        <h1 class="strong-text">"Conheça todas as teorias, domine todas as técnicas, mas ao tocar uma alma humana, seja apenas outra alma humana".</text>
+        <h1 class="strong-text">[Carl Gustav Jung]</h1>
+      </div>
+      <div class="scroll-down-button" id="scroll-down-button">
+        <img src="../assets/arrow.svg" alt="Botão" onclick="scrollDown();" /> 
+      </div>
+    </div>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators" style="bottom: 0;">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="rounded-pill active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      </ol>
+      <div class="carousel-inner" style="height: 75vh; margin-top: 150px;">
+        <div class="carousel-item active">
+          <img class="d-block w-100 slide-img" src="../assets/first-slide1.svg" alt="First slide">
+          <div class="d-none d-md-block slide-to left">
+            <img src="../assets/icon-suitcase-green.svg">
+            <p class="slide-text">BUSINESS PROCESS OUTSOURCING</p>
+            <button class="outline-button" href="#">conheça</button>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100 slide-img" src="../assets/second-slide.svg" alt="Second slide">
+          <div class="d-none d-md-block slide-to right">
+            <img src="../assets/icon-paper-money-green.svg">
+            <p class="slide-text">OPERAÇÕES DE FOLHA DE PAGAMENTO</p>
+            <button class="outline-button" href="#">conheça</button>
+          </div>
+        </div>
+      </div>
+    </div>
+     <div class="about-container">
+    <div class="about-items">
+      <div>
+        <h1 class="about-h1">NOSSA ORIGEM</h1>
+        <h2 class="about-h2"> A Campos & Souza nasceu em 2001 a partir do sonho de empreender dos seus sócios, agregando know-how, experiência profissional e paixão acumulados ao longo de mais de 20 anos de atividades.</h2>
+        <h2 class="about-h2">Nosso modelo de trabalho é 100% remoto, possibilitando atender clientes em diversas regiões do país.</h2>
+      </div>
+      <img class="about-icon" src="../assets/icon-bithday-cake.svg">
+    </div>
+    <div class="about-items">
+      <div>
+        <h1 class="about-h1">MISSÃO</h1>
+        <h2 class="about-h2"> Entender de maneira personalizada os processos dos clientes, garantindo a assertividade da sua gestão de RH e implementando soluções eficazes em todos os subsistemas para conquistarem resultados contínuos.</h2>
+      </div>
+      <img class="about-icon" src="../assets/icon-hand-shake.svg">
+    </div>
+    <div class="about-items">
+      <div>
+        <h1 class="about-h1">VISÃO</h1>
+        <h2 class="about-h2"> Ser reconhecida pelos nossos clientes como uma Consultoria de RH de excelência, com vasta experiência em soluções que simplificam os processos e geram resultados expressivos e melhoria continua através da automatização.</h2>
+      </div>
+      <img class="about-icon" src="../assets/icon-eye.svg">
+    </div>
+    <div class="about-items">
+      <div>
+        
+        <h1 class="about-h1">NOSSOS VALORES E CRENÇAS</h1>
+        <h2 class="about-h2">Acreditamos que as mudanças nas empresas acontecem a partir do desenvolvimento das pessoas e da automatização dos processos.</h2>
+        <h2 class="about-h2">Assim, tudo é estruturado e planejado de forma personalizada, com base na experiência, no conhecimento técnico,na ética e no respeito à legislação.</h2>
+      </div>
+      <img class="about-icon" src="../assets/icon-hand-pray.svg">
+    </div>
+    </div>
+  <div class="first-banner">
+    <img src="../assets/second-background.svg" style="width:100%;">
+    <div class="first-banner-text">
+      <div style="height: 17vh; text-align: left; margin-bottom: 10%;">
+          <h1>FALE CONOSCO</h1>
+          <h2>PARA SER MAIS</h2>
+          <h3>COMPETITIVO</h3>
+      </div>
+      <P>Deseja tonar a sua empresa mais competitiva, colocando foco no que de fato traz resultados? Terceirize as atividades relacionadas aos processamentos de Recursos Humanos.</P>
+      <P>Mas, é claro, tudo deve ser feito com muita cautela, a começar pela seleção desse serviço terceirizado.</P>
+    </div>
+    </div>
+    <div class="modal-items-container">
+      <div class="modal-items">
+        <div class="modal-item" data-toggle="modal" data-target="#outsourcing-modal">
+            <img src="../assets/icon-suitcase.svg">
+            <h1>business process outsourcing</h1>
+        </div>
+        <div class="modal-item">
+            <img src="../assets/icon-paper-money.svg">
+            <h1>operações de folha com tecnologia de ponta</h1>
+        </div>
+        <div class="modal-item">
+            <img src="../assets/icon-cash-register.svg">
+            <h1>recrutamento e seleção</h1>
+        </div>
+        <div class="modal-item">
+            <img src="../assets/icon-people.svg">
+            <h1>recrutação & seleção</h1>
+        </div>
+        <div class="modal-item">
+            <img src="../assets/icon-people-settings.svg">
+            <h1>treinamento & desenvolvimento</h1>
+        </div>
+      </div>
+      <div class="modal-items">
+          <div class="modal-item">
+            <img src="../assets/icon-grow-chart.svg">
+            <h1>gestão de desempenho</h1>
+        </div>
+        <div class="modal-item">
+            <img src="../assets/icon-pizza-chart.svg">
+            <h1>remuneração & benefícios estratégicos</h1>
+        </div>
+        <div class="modal-item">
+            <img src="../assets/icon-person-shield.svg">
+            <h1>saúde ocupacional & segurança do trabalho</h1>
+        </div>
+        <div class="modal-item">
+            <img src="../assets/icon-checklist.svg">
+            <h1>gestão de processos trabalhistas</h1>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" tabindex="-1" role="dialog" id="outsourcing-modal">
+      <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <img src="../assets/icon-suitcase-green.svg">
+            <h1 class="modal-title">business process outsourcing</h1>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>A Campos & Souza oferece o serviço de “Business Process Outsourcing” (BPO) que possibilita ao nosso cliente priorizar a atividade principal do seu negócio, agregar reduções de custos operacionais e de tempo, e viabilizar a Gestão Estratégica e atuante na empresa. </p>
+            <p>Contamos com uma equipe operacional de serviços para folha de pagamento que possui toda a base de conhecimentos jurídicos e trabalhistas, atuando na eficiência de tarefas tradicionalmente complexas e burocráticas.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section style="margin-top: 5%;">
+      <form action="" class="form-wrapper">
+        <div class="form-container">
+          <div class="input-container">
+            <input id="name" class="input image" type="text" pattern=".+" required />
+            <label class="label" for="name">Nome</label>
+            <span><i class="fas fa-user"></i></span>
+          </div>
+          <div class="input-container"> 
+            <input id="email" class="input image" type="text" pattern=".+" required />
+            <label class="label" for="email">Email</label>
+            <span><i class="fas fa-at"></i></span>
+          </div>
+          <div class="input-container">
+            <input id="phone" class="input image" type="phone" pattern=".+" required />
+            <label class="label" for="phone">Telefone</label>
+            <span><i class="fas fa-phone"></i></span>
+          </div>
+          <div class="input-container">
+            <input id="company" class="input image" type="text" pattern=".+" required />
+            <label class="label" for="company">Empresa</label>
+            <span><i class="fas fa-building"></i></span>
+          </div>
+          <div class="input-container">
+            <input id="ocupation" class="input image" type="text" pattern=".+" required />
+            <label class="label" for="ocupation">Cargo</label>
+            <span><i class="fas fa-user-tie"></i></span>
+          </div>
+          <div class="input-container">
+            <input id="employers-number" class="input image" type="number" pattern=".+" required />
+            <label class="label" for="employers-number">Número de funcionários</label>
+            <span><i class="fas fa-users"></i></span>
+          </div>
+        </div>
+        <div class="form-container">
+          <div class="input-container">
+            <input id="subject-matter" class="input image" type="text" pattern=".+" required />
+            <label class="label" for="subject-matter">Assunto</label>
+            <span><i class="fas fa-dot-circle"></i></span>
+          </div>
+          <div class="input-container">
+            <input id="description" class="input" type="text" pattern=".+" required style="padding-top: 55vh;" />
+            <label class="label" for="description">Descrição</label>
+            <span><i class="fas fa-pen" style="top: 5%;"></i></span>
+          </div>
+        </div>
+      </form>
+    </section>
+    <div style="justify-content: center; align-items: center; display: flex; margin-top: 5vh;">
+      <button class="outline-button" href="#" style="margin: 16px;">entre em contato</button>
+    </div>
+    <div class="second-banner">
+      <img src="../assets/third-background.svg" style="width:100%;">
+      <img src="../assets/shadow.png">
+    </div>
+    <div class="second-banner-text">
+      <div style="height: 17vh; text-align: left; margin-bottom: 10%;">
+        <h1><i class="fas fa-user"></i>marcos campos</h1>
+        <h3>Diretor Executivo e Comercial</h3>
+        <h2><i class="fas fa-mobile"></i>(11)9 9751-1026</h2>
+        <h4><i class="fas fa-at"></i>marcos.campos@camposesouzaconsultoria.com.br</h4>
+      </div>
+      <div style="height: 17vh; text-align: left; margin-bottom: 10%;">
+        <h1><i class="fas fa-user"></i>cleide souza</h1>
+        <h3>Diretora Financeira e Operações</h3>
+        <h2><i class="fas fa-mobile"></i>(19)9 9642-9296</h2>
+        <h4><i class="fas fa-at"></i>cleide.souza@camposesouzaconsultoria.com.br</h4>
+      </div>
+      <div class="social-icons">
+        <img src="../assets/icon-twitter.svg">
+        <img src="../assets/icon-phone-with-background.svg">
+        <img src="../assets/icon-facebook.svg">
+        <img src="../assets/icon-instagram.svg">
+        <img src="../assets/icon-youtube.svg">
+      </div>
+    </div>
+    <div class="whatsapp">
+      <img src="../assets/icon-whatsapp.svg">
+    </div>
+    <script>
+      const navbar = document.querySelector('.navbar')
+      window.addEventListener('scroll', (event) => {
+        if (window.scrollY > window.innerHeight) {
+          navbar.style.top = 0 
+          return
+        } 
+        navbar.style.top = '-15vh'
+      }, { passive: true })
+
+      const scrollDown = () => {
+        window.scrollTo({
+          top: window.innerHeight + 2,
+          behavior: 'smooth'
+        })
+      }
+    </script>
+  </body>
+</html>
