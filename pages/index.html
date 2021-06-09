@@ -14,108 +14,212 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </head>
-  <body background="../assets/background.svg" class="bg">
+  <body>
+
     <nav class="navbar">
-      <img src="../assets/campos-e-souza-logo-padrao.svg" />
+      <img class="img-max-off" src="../assets/campos-e-souza-logo-padrao.svg" onclick="scrollUp();" />
+      <img class="img-min" src="../assets/campos-e-souza-logo-mini.png" onclick="scrollUp();" />
       <ul>
-        <li><a class="" href="#home">a empresa</a></li>
-        <li><a href="#">nossos serviços</a></li>
-        <li><a href="#">clientes</a></li>
-        <li><button class="outline-button" href="#" style="margin: 16px;">orçamento</button></li>
+        <li><a href="#business">a empresa</a></li>
+        <li><a href="#services">nossos serviços</a></li>
+        <li><a href="#client">clientes</a></li>
+        <li><button class="outline-button" onclick="window.location='#budget';" style="margin: 16px;">orçamento</button></li>
       </ul>
     </nav>
-    <div class="wrapper-logo-with-text">
-      <img class="img-logo-with-text" src="../assets/campos-e-souza-logo-padrao.svg" />
-      <div>
-        <h1 class="strong-text">"Conheça todas as teorias, domine todas as técnicas, mas ao tocar uma alma humana, seja apenas outra alma humana".</text>
-        <h1 class="strong-text">[Carl Gustav Jung]</h1>
-      </div>
-      <div class="scroll-down-button" id="scroll-down-button">
-        <img src="../assets/arrow.svg" alt="Botão" onclick="scrollDown();" /> 
+
+    <div class="bg mb-10">
+      <div class="wrapper-logo-with-text">
+        <div class="">
+          <img class="logo" src="../assets/campos-e-souza-logo-padrao.svg" />
+        </div>
+       <div>
+          <h1 class="strong-text">"Conheça todas as teorias, domine todas as técnicas, mas ao tocar uma alma humana, seja apenas outra alma humana".</text>
+          <h1 class="strong-text">[Carl Gustav Jung]</h1>
+        </div>
+        <div class="scroll-down-button" id="scroll-down-button">
+          <img src="../assets/arrow.svg" alt="Botão" onclick="scrollDown();" /> 
+        </div>
       </div>
     </div>
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators" style="bottom: 0;">
+      <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="rounded-pill active"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="8"></li>
       </ol>
-      <div class="carousel-inner" style="height: 75vh; margin-top: 150px;">
+      <div class="carousel-inner" >
         <div class="carousel-item active">
-          <img class="d-block w-100 slide-img" src="../assets/first-slide1.svg" alt="First slide">
-          <div class="d-none d-md-block slide-to left">
-            <img src="../assets/icon-suitcase-green.svg">
+          <img class="slide-img" src="../assets/capa1.jpg" alt="First slide">
+          <div class="d-md-block slide-to">
+            <img src="../assets/icon-suitcase.svg">
             <p class="slide-text">BUSINESS PROCESS OUTSOURCING</p>
-            <button class="outline-button" href="#">conheça</button>
+            <div data-toggle="modal" data-target="#outsourcing-modal">
+              <button class="font-text slide-outline-button">conheça</button>
+            </div>
           </div>
         </div>
+
         <div class="carousel-item">
-          <img class="d-block w-100 slide-img" src="../assets/second-slide.svg" alt="Second slide">
-          <div class="d-none d-md-block slide-to right">
-            <img src="../assets/icon-paper-money-green.svg">
+          <img class="slide-img" src="../assets/capa2.jpg" alt="Second slide">
+          <div class="d-md-block slide-to">
+            <img src="../assets/icon-paper-money.svg">
             <p class="slide-text">OPERAÇÕES DE FOLHA DE PAGAMENTO</p>
-            <button class="outline-button" href="#">conheça</button>
+            <div data-toggle="modal" data-target="#folha-modal">
+              <button class="slide-outline-button">conheça</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img class="slide-img" src="../assets/capa3.jpg" alt="third slide">
+          <div class="d-md-block slide-to">
+            <img src="../assets/icon-cash-register.svg">
+            <p class="slide-text">SISTEMA DE FOLHA COM TECNOLOGIA DE PONTA</p>
+            <div data-toggle="modal" data-target="#folha-modal">
+              <button class="slide-outline-button">conheça</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img class="slide-img" src="../assets/capa4.jpg" alt="fourth slide">
+          <div class="d-md-block slide-to">
+            <img src="../assets/icon-people.svg">
+            <p class="slide-text">RECRUTAÇÃO & SELEÇÃO</p>
+            <div data-toggle="modal" data-target="#folha-modal">
+              <button class="slide-outline-button">conheça</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img class="slide-img" src="../assets/capa5.jpg" alt="fifth slide">
+          <div class="d-md-block slide-to">
+            <img src="../assets/icon-people-settings.svg">
+            <p class="slide-text">TREINAMENTO & DESENVOLVIMENTO</p>
+            <div data-toggle="modal" data-target="#folha-modal">
+              <button class="slide-outline-button">conheça</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img class="slide-img" src="../assets/capa6.jpg" alt="sixth slide">
+          <div class="d-md-block slide-to">
+            <img src="../assets/icon-grow-chart.svg">
+            <p class="slide-text">GESTÃO DE DESEMPENHO</p>
+            <div data-toggle="modal" data-target="#folha-modal">
+              <button class="slide-outline-button">conheça</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img class="slide-img" src="../assets/capa7.jpg" alt="seventh slide">
+          <div class="d-md-block slide-to">
+            <img src="../assets/icon-pizza-chart.svg">
+            <p class="slide-text">REMUNERAÇÃO & BENEFÍCIOS ESTRATÉGICOS</p>
+            <div data-toggle="modal" data-target="#folha-modal">
+              <button class="slide-outline-button">conheça</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img class="slide-img" src="../assets/capa8.jpg" alt="eighth slide">
+          <div class="d-md-block slide-to">
+            <img src="../assets/icon-person-shield.svg">
+            <p class="slide-text">SAÚDE OCUPACIONAL & SEGURANÇA DO TRABALHO</p>
+            <div data-toggle="modal" data-target="#folha-modal">
+              <button class="slide-outline-button">conheça</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img class="slide-img" src="../assets/capa9.jpg" alt="ninth slide">
+          <div class="d-md-block slide-to">
+            <img src="../assets/icon-checklist.svg">
+            <p class="slide-text">GESTÃO DE PROCESSOS TRABALHISTAS</p>
+            <div data-toggle="modal" data-target="#outsourcing-modal">
+              <button class="slide-outline-button">conheça</button>
+            </div>
           </div>
         </div>
       </div>
     </div>
-     <div class="about-container">
-    <div class="about-items">
-      <div>
-        <h1 class="about-h1">NOSSA ORIGEM</h1>
-        <h2 class="about-h2"> A Campos & Souza nasceu em 2001 a partir do sonho de empreender dos seus sócios, agregando know-how, experiência profissional e paixão acumulados ao longo de mais de 20 anos de atividades.</h2>
-        <h2 class="about-h2">Nosso modelo de trabalho é 100% remoto, possibilitando atender clientes em diversas regiões do país.</h2>
+
+    <div id="business"></div>
+    <div class="about-container">
+
+      <div class="about-items">
+        <div>
+          <h1 class="about-h1">NOSSA ORIGEM</h1>
+          <h2 class="about-h2"> A Campos & Souza nasceu em 2001 a partir do sonho de empreender dos seus sócios, agregando know-how, experiência profissional e paixão acumulados ao longo de mais de 20 anos de atividades.</h2>
+          <h2 class="about-h2">Nosso modelo de trabalho é 100% remoto, possibilitando atender clientes em diversas regiões do país.</h2>
+        </div>
+        <img class="about-icon" src="../assets/icon-bithday-cake.svg">
       </div>
-      <img class="about-icon" src="../assets/icon-bithday-cake.svg">
-    </div>
-    <div class="about-items">
-      <div>
-        <h1 class="about-h1">MISSÃO</h1>
-        <h2 class="about-h2"> Entender de maneira personalizada os processos dos clientes, garantindo a assertividade da sua gestão de RH e implementando soluções eficazes em todos os subsistemas para conquistarem resultados contínuos.</h2>
+
+      <div class="about-items">
+        <div>
+          <h1 class="about-h1">MISSÃO</h1>
+          <h2 class="about-h2"> Entender de maneira personalizada os processos dos clientes, garantindo a assertividade da sua gestão de RH e implementando soluções eficazes em todos os subsistemas para conquistarem resultados contínuos.</h2>
+        </div>
+        <img class="about-icon" src="../assets/icon-hand-shake.svg">
       </div>
-      <img class="about-icon" src="../assets/icon-hand-shake.svg">
-    </div>
-    <div class="about-items">
-      <div>
-        <h1 class="about-h1">VISÃO</h1>
-        <h2 class="about-h2"> Ser reconhecida pelos nossos clientes como uma Consultoria de RH de excelência, com vasta experiência em soluções que simplificam os processos e geram resultados expressivos e melhoria continua através da automatização.</h2>
+
+      <div class="about-items">
+        <div>
+          <h1 class="about-h1">VISÃO</h1>
+          <h2 class="about-h2"> Ser reconhecida pelos nossos clientes como uma Consultoria de RH de excelência, com vasta experiência em soluções que simplificam os processos e geram resultados expressivos e melhoria continua através da automatização.</h2>
+        </div>
+        <img class="about-icon" src="../assets/icon-eye.svg">
       </div>
-      <img class="about-icon" src="../assets/icon-eye.svg">
-    </div>
-    <div class="about-items">
-      <div>
-        
-        <h1 class="about-h1">NOSSOS VALORES E CRENÇAS</h1>
-        <h2 class="about-h2">Acreditamos que as mudanças nas empresas acontecem a partir do desenvolvimento das pessoas e da automatização dos processos.</h2>
-        <h2 class="about-h2">Assim, tudo é estruturado e planejado de forma personalizada, com base na experiência, no conhecimento técnico,na ética e no respeito à legislação.</h2>
+
+      <div class="about-items">
+        <div>
+          <h1 class="about-h1">NOSSOS VALORES E CRENÇAS</h1>
+          <h2 class="about-h2">Acreditamos que as mudanças nas empresas acontecem a partir do desenvolvimento das pessoas e da automatização dos processos.</h2>
+          <h2 class="about-h2">Assim, tudo é estruturado e planejado de forma personalizada, com base na experiência, no conhecimento técnico,na ética e no respeito à legislação.</h2>
+        </div>
+        <img class="about-icon" src="../assets/icon-hand-pray.svg">
       </div>
-      <img class="about-icon" src="../assets/icon-hand-pray.svg">
     </div>
-    </div>
-  <div class="first-banner">
-    <img src="../assets/second-background.svg" style="width:100%;">
-    <div class="first-banner-text">
-      <div style="height: 17vh; text-align: left; margin-bottom: 10%;">
-          <h1>FALE CONOSCO</h1>
-          <h2>PARA SER MAIS</h2>
-          <h3>COMPETITIVO</h3>
+
+  <div class="bg2">
+    <img class="slide-img" src="../assets/background2.jpg">
+    <div class="bg2-text">
+      <div class="font-title">
+        <h1>FALE CONOSCO</h1>
+        <h2>PARA SER MAIS</h2>
+        <h3>COMPETITIVO</h3>
       </div>
       <P>Deseja tonar a sua empresa mais competitiva, colocando foco no que de fato traz resultados? Terceirize as atividades relacionadas aos processamentos de Recursos Humanos.</P>
       <P>Mas, é claro, tudo deve ser feito com muita cautela, a começar pela seleção desse serviço terceirizado.</P>
     </div>
-    </div>
+  </div>
+
+    <div id="services"> </div>
     <div class="modal-items-container">
       <div class="modal-items">
         <div class="modal-item" data-toggle="modal" data-target="#outsourcing-modal">
             <img src="../assets/icon-suitcase.svg">
             <h1>business process outsourcing</h1>
         </div>
-        <div class="modal-item">
+        <div class="modal-item" data-toggle="modal" data-target="#folha-modal">
             <img src="../assets/icon-paper-money.svg">
-            <h1>operações de folha com tecnologia de ponta</h1>
+            <h1>operações de folha de pagamento</h1>
         </div>
         <div class="modal-item">
             <img src="../assets/icon-cash-register.svg">
-            <h1>recrutamento e seleção</h1>
+            <h1>sistema de folha com tecnologia de ponta</h1>
         </div>
         <div class="modal-item">
             <img src="../assets/icon-people.svg">
@@ -145,6 +249,7 @@
         </div>
       </div>
     </div>
+
     <div class="modal fade" tabindex="-1" role="dialog" id="outsourcing-modal">
       <div class="modal-dialog modal-xl" role="document">
         <div class="modal-content">
@@ -162,7 +267,37 @@
         </div>
       </div>
     </div>
-    <section style="margin-top: 5%;">
+
+    <div class="modal fade" tabindex="-1" role="dialog" id="folha-modal">
+      <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <img src="../assets/icon-suitcase-green.svg">
+            <h1 class="modal-title">OPERAÇÕES DE FOLHA DE PAGAMENTO</h1>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>A folha de pagamento é uma das partes mais importantes da gestão financeira de uma empresa. Com o eSocial, ela ganha um papel ainda mais relevante.</p>
+            <p>No Brasil, a lei determina que a organização realize sua contabilização no próprio mês em que ocorre a prestação do trabalho referente à remuneração.</p>
+            <p>Possuímos soluções de folha de pagamento, experiência e tecnologia unificada com recursos convenientes para atender a sua necessidade de forma personalizada, considerando:</p>
+            <br>
+            <div class="modal-wrapper">
+              <img src="../assets/folha1.svg">
+              <img src="../assets/folha2.svg">
+              <img src="../assets/folha3.svg">
+              <img src="../assets/folha4.svg">
+              <img src="../assets/folha5.svg">
+              <img src="../assets/folha6.svg">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="budget"></div>
+    <section class="mt-10">
       <form action="" class="form-wrapper">
         <div class="form-container">
           <div class="input-container">
@@ -209,38 +344,48 @@
           </div>
         </div>
       </form>
+      <div class="mb-10" style="justify-content: center; align-items: center; display: flex; margin-top: 5vh;">
+        <button class="outline-button" href="#">entre em contato</button>
+      </div>
     </section>
-    <div style="justify-content: center; align-items: center; display: flex; margin-top: 5vh;">
-      <button class="outline-button" href="#" style="margin: 16px;">entre em contato</button>
-    </div>
-    <div class="second-banner">
-      <img src="../assets/third-background.svg" style="width:100%;">
-      <img src="../assets/shadow.png">
-    </div>
-    <div class="second-banner-text">
-      <div style="height: 17vh; text-align: left; margin-bottom: 10%;">
-        <h1><i class="fas fa-user"></i>marcos campos</h1>
-        <h3>Diretor Executivo e Comercial</h3>
-        <h2><i class="fas fa-mobile"></i>(11)9 9751-1026</h2>
-        <h4><i class="fas fa-at"></i>marcos.campos@camposesouzaconsultoria.com.br</h4>
+    
+
+    <div class="bg3">
+      <img class="slide-img" src="../assets/background3.jpg">
+      
+
+        <div class="bg3-text">
+          <div>
+            <h1><i class="fas fa-user"></i>marcos campos</h1>
+            <h3>Diretor Executivo e Comercial</h3>
+            <h2><i class="fas fa-mobile"></i>(11) 99751-1026</h2>
+            <h4><i class="fas fa-at"></i>marcos.campos@camposesouzaconsultoria.com.br</h4>
+          </div>
+          <div>
+            <h1><i class="fas fa-user"></i>cleide souza</h1>
+            <h3>Diretora Financeira e Operações</h3>
+            <h2><i class="fas fa-mobile"></i>(19) 99642-9296</h2>
+            <h4><i class="fas fa-at"></i>cleide.souza@camposesouzaconsultoria.com.br</h4>
+          </div>
+          <div class="social-icons">
+            <img src="../assets/icon-twitter.svg">
+            <img src="../assets/icon-phone-with-background.svg">
+            <img src="../assets/icon-facebook.svg">
+            <img src="../assets/icon-instagram.svg">
+            <img src="../assets/icon-youtube.svg">
+          </div>
+        </div>
+
+     
+        
+      
+      
+      <div class="whatsapp">
+        <img src="../assets/icon-whatsapp.svg">
       </div>
-      <div style="height: 17vh; text-align: left; margin-bottom: 10%;">
-        <h1><i class="fas fa-user"></i>cleide souza</h1>
-        <h3>Diretora Financeira e Operações</h3>
-        <h2><i class="fas fa-mobile"></i>(19)9 9642-9296</h2>
-        <h4><i class="fas fa-at"></i>cleide.souza@camposesouzaconsultoria.com.br</h4>
-      </div>
-      <div class="social-icons">
-        <img src="../assets/icon-twitter.svg">
-        <img src="../assets/icon-phone-with-background.svg">
-        <img src="../assets/icon-facebook.svg">
-        <img src="../assets/icon-instagram.svg">
-        <img src="../assets/icon-youtube.svg">
-      </div>
     </div>
-    <div class="whatsapp">
-      <img src="../assets/icon-whatsapp.svg">
-    </div>
+
+
     <script>
       const navbar = document.querySelector('.navbar')
       window.addEventListener('scroll', (event) => {
@@ -248,12 +393,19 @@
           navbar.style.top = 0 
           return
         } 
-        navbar.style.top = '-15vh'
+        navbar.style.top = '-30vh'
       }, { passive: true })
 
       const scrollDown = () => {
         window.scrollTo({
           top: window.innerHeight + 2,
+          behavior: 'smooth'
+        })
+      }
+
+      const scrollUp = () => {
+        window.scrollTo({
+          top: 0,
           behavior: 'smooth'
         })
       }

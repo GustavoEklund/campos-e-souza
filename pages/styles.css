@@ -1,96 +1,108 @@
+@font-face {
+	font-family: bebas;
+	src: url(../assets/BebasNeue.ttf)
+}
+@font-face {
+	font-family: beleza;
+	src: url(../assets/Belleza.ttf)
+}
+.font-title {
+  font-family: "bebas", sans-serif;
+}
+.font-text {
+  font-family: "beleza", sans-serif;
+}
 body,
 html {
-  height: 100%;
+  width: 100vw;
   margin: 0;
-  font-family: "Roboto", sans-serif;
+ 
 }
 
-/* FIRST PART */
-
 .bg {
-  height: 100%;
-  width: 100%;
+  position: relative;
+  height: 90vh;
+  width: 100vw;
+  display: flex;
+  background-image: url("../assets/background.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-
 .wrapper-logo-with-text {
-  height: 95vh;
-  width: 70%;
+  height: 100vh;
+  width: 100vw;
   display: flex;
   margin: auto;
+  margin-top:0;
   flex-direction: column;
-  position: relative;
+  position: absolute;
+  text-align: center;
   justify-content: space-around;
 }
-
-.img-logo-with-text {
-  width: 75%;
-  align-self: center;
-  margin-top: 15%;
+.logo {
+  margin-top: 10vh;
+  width: 50%;
+  max-width: 1000px;
 }
-
 .strong-text {
   color: #afb0af;
   font-size: 1.5rem;
   text-align: center;
   align-self: center;
-  margin: 0;
+  margin: 10px;
   padding: 0;
+  font-family: "beleza", sans-serif;
 }
-
 .scroll-down-button {
+  margin-top: 10%;
   align-self: center;
   cursor: pointer;
   transition: filter 300ms linear;
 }
-
 .scroll-down-button:hover {
   filter: brightness(0.7);
 }
-
-.scroll-down-button > img {
-  width: 80%;
+.mb-10 {
+  margin-bottom: 20vh;
 }
-
-/* SECOND PART - MENU AND SLIDE */
+.mt-10 {
+  margin-top: 20vh;
+}
 
 .navbar {
   position: fixed;
-  top: 0;
+  top: -30vh;
   left: 0;
-  height: 15vh;
+  height: 100px;
   width: 100vw;
   z-index: 1;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: start;
   background-color: #fff;
-  padding-left: 50px;
+  font-family: "bebas", sans-serif;
   box-shadow: 0 0 32px 5px rgba(0, 0, 0, 0.08);
   transition: all 300ms ease-out;
 }
-
 .navbar > img {
-  display: block;
+  margin-left: 10px;
+  width: 350px;
 }
-
 .navbar > ul {
   margin: 0;
   display: flex;
   list-style-type: none;
   overflow: hidden;
 }
-
 .navbar a {
+  margin-top: 20px;
   display: block;
   color: #277364;
   text-align: center;
-  padding: 32px;
+  padding: 10px;
   text-decoration: none;
-  font-weight: bold;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 li > a:hover {
@@ -99,14 +111,14 @@ li > a:hover {
 }
 
 .outline-button {
+  margin:0;
   border: 2px solid #277364;
   border-radius: 15px;
   background-color: transparent;
   color: #277364;
-  font-size: 16px;
-  font-weight: bold;
+  font-size: 1.2rem;
   cursor: pointer;
-  padding: 12px 36px;
+  padding: 10px 32px;
 }
 
 .outline-button:hover {
@@ -116,46 +128,52 @@ li > a:hover {
 }
 
 .slide-img {
-  height: 50% !important;
-  width: 100%¨;
+  width: 100vw;
+  filter: grayscale(40%) brightness(80%);
+}
+
+.slide-outline-button {
+  border: 2px solid #fff;
+  border-radius: 15px;
+  background-color: transparent;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 12px 36px;
+}
+
+.slide-outline-button:hover {
+  background-color: #277364;
+  color: #fff;
+  border: 2px solid transparent;
+  animation: 1 ease-in-out;
 }
 
 .slide-text {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #35b39a;
+  font-size: 4vh;
+  color: #fff;
+  font-family: "bebas", sans-serif;
 }
 
 .slide-to {
   position: absolute;
   left: 5%;
   padding-bottom: 5%;
-  bottom: 25%;
-}
-
-.left {
+  bottom: 10%;
   text-align: start;
 }
-
-.right {
-  text-align: end;
-  right: 5%;
-}
-
-/* THIRD PART - ABOUT */
 
 .about-container {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-around;
-  margin: 10%;
-  margin-top: 5%;
-  margin-bottom: 5%;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 1vw;
 }
 
 .about-items {
-  width: 30%;
+  width: 300px;
   height: 60vh;
   border-radius: 20px;
   background-color: #277364;
@@ -169,11 +187,11 @@ li > a:hover {
 
 .about-h1 {
   font-size: 22px;
-  font-weight: bold;
   color: #fff;
   text-align: center;
   margin-top: 10%;
   margin-bottom: 32px;
+  font-family: "bebas", sans-serif;
 }
 
 .about-h2 {
@@ -182,55 +200,47 @@ li > a:hover {
   text-align: center;
   margin-left: 5%;
   margin-right: 5%;
+  font-family: "beleza", sans-serif;
 }
 
-/* FOURTH PART - FIRST BANNER */
 
-.first-banner {
+.bg2 {
+  width: 100vw;
   position: relative;
 }
-
-.first-banner img {
-  width: 100%;
-  height: auto;
-}
-
-.first-banner-text {
+.bg2-text {
   position: absolute;
   top: 20%;
   left: 5%;
-  color: #35b39a;
-  width: 40%;
-  padding: 16px;
+  color: #fff;
+  width: 60%;
 }
-
-.first-banner-text h1 {
+.bg2-text h1 {
   margin: 0;
   padding: 0;
-  font-size: 3vw;
+  font-size: 4vw;
 }
-
-.first-banner-text h2 {
+.bg2-text h2 {
   margin: 0;
+  margin-top:-1vw;
   padding: 0;
-  font-size: 3vw;
+  font-size: 3.8vw;
 }
-
-.first-banner-text h3 {
+.bg2-text h3 {
   margin: 0;
+  margin-top:-1vw;
   padding: 0;
-  font-size: 3vw;
+  font-size: 4.4vw;
 }
-
-.first-banner-text p {
-  font-size: 20px;
+.bg2-text p {
+  font-size: 2vw;
   color: #fff;
   text-align: justify;
+  font-family: "beleza", sans-serif;
 }
 
-/* FIFTH PART - MODAL */
-
 .modal-items-container {
+  margin-top:1%;
   position: relative;
   flex-direction: row;
   display: flex;
@@ -239,7 +249,6 @@ li > a:hover {
   height: 85vh;
   background-color: #277364;
 }
-
 .modal-items {
   width: 30%;
   justify-content: space-around;
@@ -247,7 +256,6 @@ li > a:hover {
   flex-direction: column;
   margin-top: 5%;
 }
-
 .modal-item {
   flex-direction: row;
   display: flex;
@@ -256,31 +264,26 @@ li > a:hover {
   cursor: pointer;
   transition: filter 300ms linear;
 }
-
 .modal-item:hover {
   filter: brightness(0.7);
 }
-
 .modal-item img {
   margin: 0;
-  padding: 10px;
   width: 5vw;
+  margin-top: 1%;
 }
-
 .modal-item h1 {
   color: #fff;
   text-transform: uppercase;
-  font-size: 1.3rem;
-  font-weight: bold;
+  font-size: 1.6vw;
   margin-left: 5%;
   align-self: center;
+  font-family: "bebas", sans-serif;
 }
-
 .modal-header {
   display: flex;
   align-items: center;
 }
-
 .modal-title {
   margin-left: 32px;
   font-size: 24px;
@@ -288,40 +291,32 @@ li > a:hover {
   color: #277364;
   font-weight: bold;
 }
-
 .modal-body {
   padding: 132px;
 }
-
 .modal-body > p {
   font-size: 20px;
   font-weight: bold;
 }
-
-@media (min-width: 992px) {
-  .modal-xl {
-    width: 80%;
-    max-width: 1200px;
-  }
+.modal-wrapper {
+  text-align:center;
 }
-
-/* SIXTH PART - FORM */
+.modal-wrapper img {
+  margin: 1vw;
+}
 
 .input-container {
   position: relative;
 }
-
 .input-container i {
   position: absolute;
   top: 30%;
   right: 5%;
   color: #9a9a9a;
 }
-
 .input-container:focus + span {
   color: #277364 !important;
 }
-
 .form-container {
   position: relative;
   flex-direction: column;
@@ -330,7 +325,6 @@ li > a:hover {
   width: 25%;
   height: 70vh;
 }
-
 .form-wrapper {
   position: relative;
   flex-direction: row;
@@ -340,7 +334,6 @@ li > a:hover {
   width: 100%;
   margin: auto;
 }
-
 input {
   border: 2px solid #9e9e9e;
   border-radius: 10px;
@@ -348,7 +341,6 @@ input {
   transition: 0.2s ease-in-out;
   box-sizing: border-box;
 }
-
 label {
   top: 10px;
   left: 10px;
@@ -362,19 +354,16 @@ label {
   transition: 0.2s ease-in-out;
   box-sizing: border-box;
 }
-
 input,
 label {
   width: 100%;
   height: 3rem;
   font-size: 1rem;
 }
-
 input:valid,
 input:focus {
   border: 2px solid #277364;
 }
-
 input:valid + label,
 input:focus + label {
   color: #277364;
@@ -383,77 +372,64 @@ input:focus + label {
   pointer-events: none;
 }
 
-/* SEVENTH PART - SECOND BANNER (CONTACT) */
 
-.second-banner {
+.bg3 {
   position: relative;
-  width: 100%;
+  width: 100vw;
 }
-
-.second-banner img {
-  width: 100%;
-  height: auto;
+.bg3-text {
   position: absolute;
-}
-
-.second-banner-text {
-  position: absolute;
-  top: 560%;
-  right: 5px;
+  top: 20%;
   color: #fff;
-  width: 40%;
-  height: 60vh;
-  padding: 16px;
+  width: 50vw;
+  left: 50vw;
 }
-
-.second-banner-text i {
+.bg3-text i {
   margin-right: 5%;
   width: 2vw;
   text-align: center;
 }
-
-.second-banner-text h1 {
+.bg3-text h1 {
   margin: 0;
   padding: 0;
-  font-size: 3.8vh;
+  font-size: 2.2vw;
   text-transform: uppercase;
+  font-family: "bebas", sans-serif;
+}
+.bg3-text h3 {
+  margin: 0;
+  margin-top: -0.5vw;
+  margin-bottom: 0.5vw;
+  margin-left: 4.5vw;
+  padding: 0;
+  font-size: 1vw;
+  font-family: "beleza", sans-serif;
+}
+.bg3-text h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 1.5vw;
   font-weight: bold;
+  font-family: "beleza", sans-serif;
 }
-
-.second-banner-text h3 {
-  margin: 0;
-  margin-left: 10%;
+.bg3-text h4 {
+  margin-bottom: 2vw;
   padding: 0;
-  font-size: 3vh;
-}
-
-.second-banner-text h2 {
-  margin: 0;
-  padding: 0;
-  font-size: 3.4vh;
+  font-size: 1vw;
   font-weight: bold;
-}
-
-.second-banner-text h4 {
-  margin: 0;
-  padding: 0;
-  font-size: 2.8vh;
-  width: 100%;
+  font-family: "beleza", sans-serif;
 }
 
 .social-icons {
-  height: 15vh;
-  width: 5vh;
-  margin-left: 10%;
+  margin-top: 10vw;
+  margin-left: 10vw;
   display: flex;
   flex-direction: row;
 }
-
 .social-icons img {
-  margin-right: 2vh;
-  margin-bottom: 5vh;
+  margin-right: 2vw;
+  margin-bottom: 5vw;
 }
-
 .whatsapp {
   position: fixed;
   bottom: 0;
@@ -462,3 +438,31 @@ input:focus + label {
   width: 100vw;
   z-index: 1;
 }
+
+.img-min {
+  display:none;
+}
+
+
+
+
+@media (max-width: 880px) {
+  .slide-to img {
+    width: 10vh;
+  }
+  .img-max-off {
+    display:none;
+  }
+  .img-min {
+    display:flex;
+    max-width: 80px;
+  }
+}
+
+@media (min-width: 992px) {
+  .modal-xl {
+    width: 80%;
+    max-width: 1200px;
+  }
+}
+
